@@ -8,31 +8,31 @@
 ## Phase 1 — Project Setup & Desktop Shell
 
 ### Setup
-- [ ] [G] Init pnpm monorepo
-- [ ] [G] Create Tauri + React + TS app (`apps/desktop-ui/`)
-- [ ] [G] Create Node.js + TS backend (`apps/orchestrator-api/`)
-- [ ] [G] Create shared-types package (`packages/shared-types/`)
-- [ ] [G] Configure linting, formatting, tsconfig
-- [ ] [G] Set up .gitignore, README, base configs
-- [ ] [G] Create full folder structure
+- [x] [G] Init pnpm monorepo
+- [x] [G] Create Tauri + React + TS app (`apps/desktop-ui/`)
+- [x] [G] Create Node.js + TS backend (`apps/orchestrator-api/`)
+- [x] [G] Create shared-types package (`packages/shared-types/`)
+- [x] [G] Configure linting, formatting, tsconfig
+- [x] [G] Set up .gitignore, README, base configs
+- [x] [G] Create full folder structure
 
 ### Desktop UI Shell
-- [ ] [G] Main app layout (sidebar + main panel)
-- [ ] [G] Floating assistant orb component
-- [ ] [G] Message/transcript panel
-- [ ] [G] Activity/task log panel
-- [ ] [G] Text input bar + send button
-- [ ] [G] Mic button (UI only)
-- [ ] [G] Settings drawer skeleton
-- [ ] [G] Dark theme + Tailwind CSS setup
+- [x] [G] Main app layout (sidebar + main panel)
+- [x] [x] [G] Floating assistant orb component
+- [x] [G] Message/transcript panel
+- [x] [G] Activity/task log panel
+- [x] [G] Text input bar + send button
+- [x] [G] Mic button (UI only)
+- [x] [G] Settings drawer skeleton
+- [x] [G] Dark theme + Tailwind CSS setup
 - [ ] [C] **REVIEW**: UI architecture and components
 
 ### Backend Foundation
-- [ ] [G] Express/Fastify server setup
-- [ ] [G] WebSocket server for real-time comms
-- [ ] [G] SQLite + ORM setup
-- [ ] [G] Initial DB schema (users, conversations, messages, tasks)
-- [ ] [G] REST API endpoints skeleton
+- [x] [G] Express/Fastify server setup
+- [x] [G] WebSocket server for real-time comms
+- [x] [G] SQLite + ORM setup
+- [x] [G] Initial DB schema (users, conversations, messages, tasks)
+- [x] [G] REST API endpoints skeleton
 - [ ] [G] Connect frontend ↔ backend (WS + HTTP)
 
 ### Phase 1 Validation
@@ -428,7 +428,7 @@
 ## Phase 14 — Advanced Features (V2.0+)
 
 ### Advanced Desktop
-- [ ] [G] AppleScript integration
+- [ ] [G] AppleScript integration for deeper app control
 - [ ] [G] Clipboard tools
 - [ ] [G] Screenshot + screen context
 - [ ] [G] Window management
@@ -442,7 +442,7 @@
 ### Advanced Memory
 - [ ] [G] Vector embeddings search
 - [ ] [G] Coding session memory
-- [ ] [G] Auto-learning from corrections
+- [ ] [G] Auto-learning from user corrections
 
 ### Integrations
 - [ ] [G] Calendar integration
@@ -456,7 +456,7 @@
 
 | Phase | Total Tasks | Gemini | Claude | Status |
 |-------|------------|--------|--------|--------|
-| 1. Setup & Desktop Shell | 27 | 23 | 4 | Not Started |
+| 1. Setup & Desktop Shell | 27 | 23 | 4 | In Progress |
 | 2. Event System & Orchestrator | 23 | 19 | 4 | Not Started |
 | 3. Desktop Tools | 20 | 17 | 3 | Not Started |
 | 4. Permission System | 11 | 11 | 0 | Not Started |

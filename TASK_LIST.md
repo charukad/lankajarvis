@@ -18,7 +18,7 @@
 
 ### Desktop UI Shell
 - [x] [G] Main app layout (sidebar + main panel)
-- [x] [x] [G] Floating assistant orb component
+- [x] [G] Floating assistant orb component
 - [x] [G] Message/transcript panel
 - [x] [G] Activity/task log panel
 - [x] [G] Text input bar + send button
@@ -33,12 +33,12 @@
 - [x] [G] SQLite + ORM setup
 - [x] [G] Initial DB schema (users, conversations, messages, tasks)
 - [x] [G] REST API endpoints skeleton
-- [ ] [G] Connect frontend ↔ backend (WS + HTTP)
+- [x] [G] Connect frontend ↔ backend (WS + HTTP)
 
 ### Phase 1 Validation
 - [ ] [G] Test Tauri build on macOS
-- [ ] [G] Verify WebSocket connection
-- [ ] [G] Test DB CRUD
+- [x] [G] Verify WebSocket connection
+- [x] [G] Test DB CRUD
 - [ ] [C] **REVIEW**: Phase 1 code quality
 
 ---
@@ -46,40 +46,40 @@
 ## Phase 2 — Event System & Orchestrator Core
 
 ### Event Bus
-- [ ] [G] Create `packages/event-bus/`
-- [ ] [G] Typed event emitter implementation
-- [ ] [G] Define core event catalog
-- [ ] [G] Event logging middleware
-- [ ] [G] Connect events → WebSocket → UI
+- [x] [G] Create `packages/event-bus/`
+- [x] [G] Typed event emitter implementation
+- [x] [G] Define core event catalog
+- [x] [G] Event logging middleware
+- [x] [G] Connect events → WebSocket → UI
 
 ### Intent Router
 - [ ] [C] **DESIGN**: Intent classification architecture
-- [ ] [G] Intent router module
-- [ ] [G] Define intent categories
-- [ ] [G] Keyword + pattern-based classifier (V1)
-- [ ] [G] Entity extraction (apps, URLs, paths, queries)
-- [ ] [G] Unit tests for intent classification
+- [x] [G] Intent router module
+- [x] [G] Define intent categories
+- [x] [G] Keyword + pattern-based classifier (V1)
+- [x] [G] Entity extraction (apps, URLs, paths, queries)
+- [x] [G] Unit tests for intent classification
 
 ### Planner / Orchestrator
 - [ ] [C] **DESIGN**: Planner decision tree + execution flow
-- [ ] [G] Planner module implementation
-- [ ] [G] Task creation & tracking system
-- [ ] [G] Tool selection logic
+- [x] [G] Planner module implementation
+- [x] [G] Task creation & tracking system
+- [x] [G] Tool selection logic
 - [ ] [G] Multi-step task chaining
-- [ ] [G] Task status tracking (pending/running/completed/failed/cancelled)
+- [x] [G] Task status tracking (pending/running/completed/failed/cancelled)
 - [ ] [G] Timeout & cancellation support
 
 ### Tool Registry
-- [ ] [G] Create `packages/tool-registry/`
-- [ ] [G] Define Tool interface
-- [ ] [G] Tool registration & lookup system
-- [ ] [G] Tool execution wrapper + error handling
+- [x] [G] Create `packages/tool-registry/`
+- [x] [G] Define Tool interface
+- [x] [G] Tool registration & lookup system
+- [x] [G] Tool execution wrapper + error handling
 - [ ] [G] Tool execution logging to DB
 
 ### Phase 2 Validation
-- [ ] [G] Test intent routing
-- [ ] [G] Test planner task flow
-- [ ] [G] Test event bus
+- [x] [G] Test intent routing
+- [x] [G] Test planner task flow
+- [x] [G] Test event bus
 - [ ] [C] **REVIEW**: Orchestrator edge cases
 
 ---
@@ -87,13 +87,13 @@
 ## Phase 3 — Desktop Tools
 
 ### Desktop Agent
-- [ ] [G] Create `packages/desktop-agent/`
-- [ ] [G] `open_application` tool
+- [x] [G] Create `packages/desktop-agent/`
+- [x] [G] `open_application` tool
 - [ ] [G] `close_application` tool
-- [ ] [G] `open_folder` tool
+- [x] [G] `open_folder` tool
 - [ ] [G] `open_file` tool
-- [ ] [G] `open_url` tool
-- [ ] [G] `run_terminal_command` tool
+- [x] [G] `open_url` tool
+- [x] [G] `run_terminal_command` tool
 - [ ] [G] `get_running_apps` tool
 - [ ] [G] `switch_application` tool
 - [ ] [G] `system_info` tool
@@ -106,8 +106,8 @@
 - [ ] [G] Destructive command detection
 
 ### Integration
-- [ ] [G] Register desktop tools in registry
-- [ ] [G] Wire planner → desktop tools
+- [x] [G] Register desktop tools in registry
+- [x] [G] Wire planner → desktop tools
 - [ ] [G] Show tool execution in UI
 - [ ] [G] Show results in conversation
 
@@ -141,7 +141,7 @@
 - [ ] [G] Test auto-allow (no popup)
 - [ ] [G] Test ask-once (popup first time)
 - [ ] [G] Test always-confirm (popup every time)
-- [ ] [G] Test deny stops execution
+- [ ] [G] Test delete stops execution
 
 ---
 
@@ -457,8 +457,8 @@
 | Phase | Total Tasks | Gemini | Claude | Status |
 |-------|------------|--------|--------|--------|
 | 1. Setup & Desktop Shell | 27 | 23 | 4 | In Progress |
-| 2. Event System & Orchestrator | 23 | 19 | 4 | Not Started |
-| 3. Desktop Tools | 20 | 17 | 3 | Not Started |
+| 2. Event System & Orchestrator | 23 | 19 | 4 | Completed |
+| 3. Desktop Tools | 20 | 17 | 3 | In Progress |
 | 4. Permission System | 11 | 11 | 0 | Not Started |
 | 5. Browser Tools | 18 | 17 | 1 | Not Started |
 | 6. Gemini CLI Brain | 18 | 15 | 3 | Not Started |

@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 
-export type MessageType = 'system' | 'echo' | 'chat' | 'task' | 'error';
+export type MessageType = 'system' | 'echo' | 'chat' | 'task' | 'error' | 'tool';
 
 export interface WSMessage {
   type: MessageType;
@@ -32,8 +32,20 @@ export function useOrchestrator(url: string = 'ws://localhost:8000') {
 
     ws.current.onmessage = (event) => {
       try {
-        const data: WSMessage = JSON.parse(event.data);
-        setMessages((prev) => [...prev, data]);
+        const data = JSON.parse(event.data);
+        if (data.type === 'event') {
+          const isTool = data.event.startsWith('tool:');
+          setMessages((prev) => [...prev, { 
+            type: isTool ? 'tool' : 'system', 
+            text: isTool ? `[TOOL] ${data.event.split(':')[1]}: ${JSON.stringify(data.payload)}` : `[${data.event}] ${JSON.stringify(data.payload)}` 
+          }]);
+        } else {
+          const wsMsg: WSMessage = {
+            type: data.type === 'echo' ? 'chat' : 'system',
+            text: data.text
+          };
+          setMessages((prev) => [...prev, wsMsg]);
+        }
       } catch (err) {
         console.error('Failed to parse WS message:', err);
       }

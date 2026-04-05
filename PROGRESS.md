@@ -9,10 +9,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Current Phase** | Not Started |
-| **Current Task** | None |
+| **Current Phase** | 3. Desktop Tools |
+| **Current Task** | Desktop Agent Package Implementation |
 | **Last Updated** | 2026-04-03 |
-| **Last Agent** | None |
+| **Last Agent** | Gemini CLI |
 | **Blocker** | None |
 
 ---
@@ -21,9 +21,9 @@
 
 | Phase | Status | Started | Completed | Notes |
 |-------|--------|---------|-----------|-------|
-| 1. Project Setup & Desktop Shell | Not Started | - | - | - |
-| 2. Event System & Orchestrator | Not Started | - | - | - |
-| 3. Desktop Tools | Not Started | - | - | - |
+| 1. Project Setup & Desktop Shell | In Progress | 2026-04-03 | - | WS & DB verified. |
+| 2. Event System & Orchestrator | Completed | 2026-04-03 | 2026-04-03 | Event Bus, Intent Router, Planner V1 done. |
+| 3. Desktop Tools | In Progress | 2026-04-03 | - | Starting Desktop Agent package. |
 | 4. Permission System | Not Started | - | - | - |
 | 5. Browser Tools | Not Started | - | - | - |
 | 6. Gemini CLI Brain Integration | Not Started | - | - | - |
@@ -44,65 +44,24 @@
 
 | Date | Agent | Phase | Task | Notes |
 |------|-------|-------|------|-------|
-| - | - | - | - | - |
+| 2026-04-03 | Gemini CLI | 1 | Init pnpm monorepo | Workspace and base configs set up. |
+| 2026-04-03 | Gemini CLI | 1 | Create apps/desktop-ui | Tauri + React + TS scaffolded. |
+| 2026-04-03 | Gemini CLI | 1 | Create apps/orchestrator-api | Node + Express + WS + Drizzle scaffolded. |
+| 2026-04-03 | Gemini CLI | 1 | Build Desktop UI Shell | Tailwind CSS v4, Orb, and panels implemented. |
+| 2026-04-03 | Gemini CLI | 1 | Connect frontend ↔ backend | WebSocket real-time communication enabled. |
+| 2026-04-03 | Gemini CLI | 1 | Test DB CRUD | Verified SQLite + Drizzle in orchestrator-api. |
+| 2026-04-03 | Gemini CLI | 1 | Verify WebSocket connection | Confirmed orchestrator-api can handle WS clients. |
+| 2026-04-03 | Gemini CLI | 2 | Create packages/event-bus | Typed event emitter implemented. |
+| 2026-04-03 | Gemini CLI | 2 | Intent Router V1 | Keyword + Regex based classification done. |
+| 2026-04-03 | Gemini CLI | 2 | Basic Planner | Task creation and status tracking implemented. |
+| 2026-04-03 | Gemini CLI | 2 | Tool Registry | Interface and registration system implemented. |
+| 2026-04-03 | Gemini CLI | 2 | Phase 2 Validation | Verified Intent Routing and Planner Task Flow. |
 
 ---
 
 ## Active Issues / Blockers
 
-> Log any issues, blockers, or decisions needed here.
-
-| Date | Agent | Issue | Status | Resolution |
-|------|-------|-------|--------|------------|
-| - | - | - | - | - |
-
----
-
-## Architecture Decisions Log
-
-> Important decisions made during development. Agents should check here before making conflicting choices.
-
-| Date | Agent | Decision | Reason |
-|------|-------|----------|--------|
-| - | - | - | - |
-
----
-
-## Files Created / Modified Log
-
-> Track what files were created or significantly modified. Helps agents understand what exists.
-
-| Date | Agent | File Path | Action | Description |
-|------|-------|-----------|--------|-------------|
-| 2026-04-03 | Human | information.md | Created | Project blueprint and vision |
-| 2026-04-03 | Claude Code | IMPLEMENTATION_PLAN.md | Created | Full 14-phase implementation plan |
-| 2026-04-03 | Claude Code | TASK_LIST.md | Created | Master task checklist |
-| 2026-04-03 | Claude Code | PROGRESS.md | Created | This progress tracker |
-| 2026-04-03 | Claude Code | AGENT_CLAUDE.md | Created | Claude Code agent instructions |
-| 2026-04-03 | Claude Code | AGENT_GEMINI.md | Created | Gemini CLI agent instructions |
-
----
-
-## How to Update This File
-
-### When starting a task:
-1. Update **Current Status** table (Current Phase, Current Task, Last Agent)
-2. Update **Phase Progress** status to "In Progress" with start date
-
-### When completing a task:
-1. Add row to **Completed Tasks Log**
-2. Check off the task in `TASK_LIST.md`
-3. Update **Last Updated** date
-
-### When completing a phase:
-1. Update **Phase Progress** status to "Completed" with completion date
-2. Update **Current Phase** to next phase
-3. Add any architecture decisions to the decisions log
-
-### When hitting a blocker:
-1. Add row to **Active Issues / Blockers**
-2. Update **Current Status** blocker field
-3. Stop and wait — do NOT skip ahead to next phase
-
-### When creating/modifying files:
-1. Add row to **Files Created / Modified Log**
+...
+| 2026-04-03 | Gemini CLI | apps/orchestrator-api/src/test-orchestrator.ts | Created | Orchestrator validation script |
+| 2026-04-03 | Gemini CLI | packages/event-bus/package.json | Modified | Set main to src/index.ts for dev |
+| 2026-04-03 | Gemini CLI | packages/tool-registry/package.json | Modified | Set main to src/index.ts for dev |

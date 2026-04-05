@@ -1,0 +1,14 @@
+{
+  "name": "event-bus",
+  "version": "1.0.0",
+  "description": "Typed event bus for Javis",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
